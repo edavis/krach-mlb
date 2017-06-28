@@ -39,9 +39,6 @@ while True:
     delta = 0.0
 
     for team in teams:
-        # if team == 'OAK':
-        #     print (iterations, team, ratings[team])
-
         new_ratings[team] = wins[team] * sum(1 / (ratings[team] + ratings[opp]) for opp in opps[team]) ** -1
         delta += abs(new_ratings[team] - ratings[team])
 
